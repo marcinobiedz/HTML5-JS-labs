@@ -1,0 +1,1 @@
+Poniewa¿ jest to moja pierwsze praca z JavaScript stworzy³em to zadanie ca³kowicie w js aby troche zapoznac sie z tym jezykiem i nie u¿ywa³em ¿adnych zewnêtrznych bibliotek. Oczywiœcie u¿ywam XMLhttprequest ale odpowiedzi serwera sa mockupowe poniewa¿ zrobi³em to w Apiary (www.apiary.io)

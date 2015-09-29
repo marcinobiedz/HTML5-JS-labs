@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>TODO</title>
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+<script src="js/angular.js"></script>
+<script src="js/app.js"></script>
+</head>
+
+<body style="padding:20px">
+
+<div data-ng-app="todoApp" data-ng-controller="todoController">
+    <h2 data-ng-show="todos.length > 0">You've got <strong>{{ todos.length }}</strong> things to do</h2>
+    <h2 data-ng-show="todos.length === 0">You've got nothing to do</h2>
+
+    <div>
+        Show
+        <div class="btn-group" role="group">
+            <button data-ng-click="filter = 'todo'" id="filterTodo" type="button" class="btn btn-danger">
+                To do
+            </button>
+            <button data-ng-click="filter = 'in-progress'" id="filterInProgress" type="button" class="btn btn-warning">
+                In progress
+            </button>
+            <button data-ng-click="filter = 'done'" id="filterDone" type="button" class="btn btn-success">
+                Done
+            </button>
+            <button data-ng-click="filter = null" id="filterAll" type="button" class="btn btn-success">
+                All
+            </button>
+        </div>
+    </div>
+
+    <ul class="list-group">
+        <li data-ng-repeat="todo in todos | filter: filterSelected" class="list-group-item clearfix">
+            <span data-spoiler>{{ todo.text }}</span>
+            <status-dropdown item="todo" />
+        </li>
+    </ul>
+
+    <div class="input-group">
+        <input type="text"
+        class="form-control"
+        placeholder="Write your todo task here..."
+        data-ng-model="newTodoText"/>
+        <span class="input-group-btn">
+            <button class="btn btn-default"
+                type="button" data-ng-click="addTodo()">
+                Add
+            </button>
+        </span>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
