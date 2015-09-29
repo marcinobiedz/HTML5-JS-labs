@@ -1,7 +1,0 @@
-LAB_2:
-
-- tytuł artykułu nie dostosowuje się do szerokości/ nie działaja sprite
-- tekst jest wyświetlany w paragrafie w całości
-- niezachowane odległosci (border, padding, margin)
-
-Ocena: 85%
